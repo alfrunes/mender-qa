@@ -194,6 +194,7 @@ sudo tee /etc/gitlab-runner/mender-runner-template-config.toml << EOF
   output_limit = 512000
   url = "https://gitlab.com"
   executor = "docker+machine"
+  environment = ["SSTATE_CACHE_INTRNL_ADDR=10.162.0.25"]
   [runners.docker]
     tls_verify = false
     image = "ubuntu:22.04"
